@@ -24,11 +24,11 @@ if ( class_exists( 'EDD_License' ) && is_admin() ) {
 }
 
 if ( ! class_exists( 'EDD_Newsletter' ) ) {
-	include( EDD_SENDY_PATH . '/includes/class-edd-newsletter.php' );
+  include( EDD_SENDY_PATH . '/includes/class-edd-newsletter.php' );
 }
 
 if ( ! class_exists( 'EDD_Sendy' ) ) {
-	include( EDD_SENDY_PATH . '/includes/class-edd-sendy.php' );
+  include( EDD_SENDY_PATH . '/includes/class-edd-sendy.php' );
 }
 
 new EDD_Sendy( 'sendy', 'Sendy' );
