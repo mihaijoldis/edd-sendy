@@ -121,7 +121,7 @@ class EDD_Newsletter {
 	 */
 	public function textdomain() {
 		// Load the translations
-		load_plugin_textdomain( 'edd_' . $this->id, false, EDD_MAILCHIMP_PATH . '/languages/' );
+		load_plugin_textdomain( 'edd-sendy', false, EDD_SENDY_PATH . '/languages/' );
 	}
 
 	/**
@@ -210,7 +210,7 @@ class EDD_Newsletter {
 
 		global $post;
 
-		echo '<p>' . __( 'Select the lists you wish buyers to be subscribed to when purchasing.', 'eddmc' ) . '</p>';
+		echo '<p>' . __( 'Select the lists you wish buyers to be subscribed to when purchasing.', 'edd-sendy' ) . '</p>';
 
 		$checked = (array) get_post_meta( $post->ID, '_edd_' . esc_attr( $this->id ), true );
 		foreach( $this->get_lists() as $list_id => $list_name ) {
