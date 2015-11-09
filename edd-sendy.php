@@ -3,7 +3,7 @@
 Plugin Name: Easy Digital Downloads - Sendy
 Plugin URL: http://easydigitaldownloads.com/extension/sendy
 Description: Include a Sendy signup option with your Easy Digital Downloads checkout
-Version: 1.0
+Version: 1.0.1
 Author: Dave Kiss
 Author URI: http://davekiss.com
 Contributors: Dave Kiss
@@ -20,7 +20,7 @@ define( 'EDD_SENDY_PATH', dirname( __FILE__ ) );
 */
 
 if ( class_exists( 'EDD_License' ) && is_admin() ) {
-  $edd_sendy_license = new EDD_License( __FILE__, EDD_SENDY_PRODUCT_NAME, '1.0', 'Dave Kiss' );
+  $edd_sendy_license = new EDD_License( __FILE__, EDD_SENDY_PRODUCT_NAME, '1.0.1', 'Dave Kiss' );
 }
 
 if ( ! class_exists( 'EDD_Newsletter' ) ) {
@@ -31,4 +31,4 @@ if ( ! class_exists( 'EDD_Sendy' ) ) {
   include( EDD_SENDY_PATH . '/includes/class-edd-sendy.php' );
 }
 
-new EDD_Sendy( 'sendy', 'Sendy' );
+$GLOBALS['edd_sendy'] = new EDD_Sendy( 'sendy', 'Sendy' );
