@@ -73,6 +73,12 @@ class EDD_Sendy extends EDD_Newsletter {
         'type'    => 'checkbox'
       ),
       array(
+        'id'      => 'edd_sendy_checkout_signup_default_value',
+        'name'    => __( 'Signup Checked by Default', 'edd-sendy' ),
+        'desc'    => __( 'Should the newsletter signup checkbox shown during checkout be checked by default?', 'edd-sendy' ),
+        'type'    => 'checkbox'
+      ),
+      array(
         'id'      => 'edd_sendy_list',
         'name'    => __( 'Enter your list ID', 'edd-sendy'),
         'desc'    => __( 'Enter the list ID you wish to subscribe buyers to. This encrypted & hashed ID can be found under the "View all lists" section of your Sendy installation.', 'edd-sendy' ),
